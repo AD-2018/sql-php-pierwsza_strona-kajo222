@@ -1,5 +1,5 @@
 <?php
 
-echo("Witaj Świecsssie, Jestem Jan Kowalski");
+echo("Witaj Świecie, Jestem Jan Kowalski");
 
 ?>
