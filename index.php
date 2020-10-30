@@ -1,6 +1,6 @@
 <?php
 
-include 'connect.php'
+include 'connect.php';
 
     
     echo('<table border="1">');
