@@ -11,11 +11,9 @@
 
                 echo("<h3>tabelka</h3>");
                     echo('<table border="1" class="tabela"');echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>"); 
-                        while($wiersz=mysqli_fetch_assoc($wynik)){
-                            echo("<tr>");   
+                        while($wiersz=mysqli_fetch_assoc($wynik)){ 
                             echo("<tr>");
                             echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['data_urodzenia']."</td>");     
-                            echo("<tr>");
                             echo("</tr>");
                         } 
                     echo('</table>');
@@ -30,9 +28,7 @@
                     echo ("<th>imie</th><th>zarobki</th>");
                         while($wiersz=mysqli_fetch_assoc($wynik)){
                             echo("<tr>");
-                            echo("<tr>");
                             echo("<td>".$wiersz['imie']."</td><td>".$wiersz['zarobki']."</td>");
-                            echo("<tr>");
                             echo("</tr>");
                         } 
                 echo('</table>');
@@ -46,9 +42,7 @@
                     echo ("<th>nazwa_dzial</th>");
                         while($wiersz=mysqli_fetch_assoc($wynik)){
                             echo("<tr>");
-                            echo("<tr>");
                             echo("<td>".$wiersz['nazwa_dzial']."</td>");
-                            echo("<tr>");
                             echo("</tr>");
                         } 
                     echo('</table>'); 
@@ -60,11 +54,9 @@
             $wynik = mysqli_query($conn, $sql);
                 echo('<table border="1" class="tabela"'); 
                     echo ("<th>avg(zarobki)</th><th>nazwa_dzial</th>"); 
-                        while($wiersz=mysqli_fetch_assoc($wynik)){ 
-                            echo("<tr>");     
+                        while($wiersz=mysqli_fetch_assoc($wynik)){  
                             echo("<tr>");     
                             echo("<td>".$wiersz['avg(zarobki)']."</td><td>".$wiersz['nazwa_dzial']."</td>");     
-                            echo("<tr>"); 
                             echo("</tr>");
                         }
                 echo('</table>'); 
@@ -78,9 +70,7 @@
                     echo ("<th>avg(zarobki)</th><th>nazwa_dzial</th>"); 
                         while($wiersz=mysqli_fetch_assoc($wynik)){ 
                             echo("<tr>");     
-                            echo("<tr>");     
                             echo("<td>".$wiersz['avg(zarobki)']."</td><td>".$wiersz['nazwa_dzial']."</td>");
-                            echo("<tr>");
                             echo("</tr>");
                         }
                 echo('</table>');
