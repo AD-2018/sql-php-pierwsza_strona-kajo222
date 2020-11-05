@@ -25,7 +25,7 @@
             $wynik = mysqli_query($conn, $sql);
 
                 echo('<table border="1" class="tabela"');
-                    echo ("<th>imie</th><th>zarobki</th>");
+                    echo ("<tr><th>imie</th><th>zarobki</th></tr>");
                         while($wiersz=mysqli_fetch_assoc($wynik)){
                             echo("<tr>");
                             echo("<td>".$wiersz['imie']."</td><td>".$wiersz['zarobki']."</td>");
@@ -39,7 +39,7 @@
             echo("<h3>zadanie 2</h3>");
             $wynik = mysqli_query($conn, $sql);  
                 echo('<table border="1" class="tabela"');
-                    echo ("<th>nazwa_dzial</th>");
+                    echo ("<tr><th>nazwa_dzial</th></tr>");
                         while($wiersz=mysqli_fetch_assoc($wynik)){
                             echo("<tr>");
                             echo("<td>".$wiersz['nazwa_dzial']."</td>");
@@ -53,7 +53,7 @@
             echo("<h3>zadanie 3</h3>"); 
             $wynik = mysqli_query($conn, $sql);
                 echo('<table border="1" class="tabela"'); 
-                    echo ("<th>avg(zarobki)</th><th>nazwa_dzial</th>"); 
+                    echo ("<tr><th>avg(zarobki)</th><th>nazwa_dzial</th></tr>"); 
                         while($wiersz=mysqli_fetch_assoc($wynik)){  
                             echo("<tr>");     
                             echo("<td>".$wiersz['avg(zarobki)']."</td><td>".$wiersz['nazwa_dzial']."</td>");     
@@ -67,7 +67,7 @@
             echo("<h3>zadanie 4</h3>"); 
             $wynik = mysqli_query($conn, $sql);  
                 echo('<table border="1" class="tabela"'); 
-                    echo ("<th>avg(zarobki)</th><th>nazwa_dzial</th>"); 
+                    echo ("<tr><th>avg(zarobki)</th><th>nazwa_dzial</th></tr>"); 
                         while($wiersz=mysqli_fetch_assoc($wynik)){ 
                             echo("<tr>");     
                             echo("<td>".$wiersz['avg(zarobki)']."</td><td>".$wiersz['nazwa_dzial']."</td>");
