@@ -8,12 +8,12 @@ h1 {
 }
 table {
   border-collapse: collapse;
-  width: 50%;
+  width: 40%;
 }
 th {
   background-color: rgb(131, 122, 0);
   color: white;
-  height: 70px;
+  height: 100px;
 }
 .button {
   background-color: #4CAF50; /* Green */
