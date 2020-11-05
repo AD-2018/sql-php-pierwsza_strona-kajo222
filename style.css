@@ -11,13 +11,25 @@ table {
   width: 40%;
 }
 th {
-  background-color: rgb(131, 122, 0);
+  
   color: white;
   height: 50px;
 }
+
+}
+#t01 tr:nth-child(even) {
+ background-color: rgb(131, 122, 0);;
+}
+#t01 tr:nth-child(odd) {
+ background-color: rgb(158, 148, 0);
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+
 .button {
-  background-color: #4CAF50; /* Green */
-  color: rgb(131, 122, 0);
+  color: #ffffff;
   border: none;
   padding: 15px 32px;
   text-align: center;
