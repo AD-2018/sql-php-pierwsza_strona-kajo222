@@ -21,7 +21,7 @@
 
         
             $sql ="select imie,zarobki from pracownicy where imie not like '%a' having zarobki<40";
-            echo("<h3>zadanie 1</h3>");
+            echo("<h3>".$sql."</h3>");
             $wynik = mysqli_query($conn, $sql);
 
                 echo('<table border="1" class="tabela"');
