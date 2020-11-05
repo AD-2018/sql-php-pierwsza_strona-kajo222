@@ -16,6 +16,7 @@ th {
   height: 50px;
 }
 .button {
+  background-color: #4CAF50; /* Green */
   color: rgb(131, 122, 0);
   border: none;
   padding: 15px 32px;
