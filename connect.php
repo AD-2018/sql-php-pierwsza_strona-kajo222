@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("sql7.freemysqlhosting.net","sql7373393","jbaItm9QJv","sql7373393");
+$conn = new mysqli("mysql-kako2307.alwaysdata.net","kako2307_1","QWE!@#123","kako2307_1");
 $sql = "SELECT * FROM pracownicy";
 $wynik = mysqli_query($conn, $sql);
 ?>
