@@ -10,7 +10,8 @@
             require_once("connect.php");
 
                 echo("<h3>tabelka</h3>");
-                    echo('<table border="1" class="tabela"');echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>"); 
+                echo('<table border="1" class="tabela"');
+                    echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>"); 
                         while($wiersz=mysqli_fetch_assoc($wynik)){
                             echo("<tr>");   
                             echo("<tr>");
