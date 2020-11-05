@@ -28,12 +28,13 @@
             $wynik = mysqli_query($conn, $sql);  
 
                 echo('<table border="1" class="tabela"');
-                    echo ("<tr><th>nazwa_dzial</th></tr>");
+                    echo ("<th>nazwa_dzial</th>");
                         while($wiersz=mysqli_fetch_assoc($wynik)){
                             echo("<tr>");
+                            echo("<td>".$wiersz['nazwa_dzial']."</td>");
+                            echo("</tr>");
                             echo("<tr>");
                             echo("<td>".$wiersz['nazwa_dzial']."</td>");
-                            echo("<tr>");
                             echo("</tr>");
                         } 
                     echo('</table>'); 
