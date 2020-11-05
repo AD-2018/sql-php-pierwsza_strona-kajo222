@@ -20,7 +20,7 @@
 
         
             $sql ="select imie,zarobki from pracownicy where imie not like '%a' having zarobki<40";
-            echo("<h3>".$sql."</h3>");
+            echo("<h3>Zadanie 1</h3>");
             $wynik = mysqli_query($conn, $sql);
 
                 echo('<table border="1" class="tabela"');
@@ -35,7 +35,7 @@
         
         
             $sql ="select nazwa_dzial from pracownicy,organizacja where id_org=dzial and (dzial=2 or dzial=3) group by dzial";
-            echo("<h3>".$sql."</h3>");
+            echo("<h3>Zadanie 2</h3>");
             $wynik = mysqli_query($conn, $sql);  
                 echo('<table border="1" class="tabela"');
                     echo ("<tr><th>nazwa_dzial</th></tr>");
@@ -49,7 +49,7 @@
         
         
             $sql ="select avg(zarobki),nazwa_dzial from pracownicy,organizacja where id_org=dzial and imie not like '%a' group by dzial having avg(zarobki)<35"; 
-            echo("<h3>".$sql."</h3>");
+            echo("<h3>Zadanie 3</h3>");
             $wynik = mysqli_query($conn, $sql);
                 echo('<table border="1" class="tabela"'); 
                     echo ("<tr><th>avg(zarobki)</th><th>nazwa_dzial</th></tr>"); 
@@ -63,7 +63,7 @@
         
         
             $sql ="select avg(zarobki),nazwa_dzial from pracownicy,organizacja where id_org=dzial group by dzial having avg(zarobki)<40"; 
-            echo("<h3>".$sql."</h3>");
+            echo("<h3>Zadanie 4</h3>");
             $wynik = mysqli_query($conn, $sql);  
                 echo('<table border="1" class="tabela"'); 
                     echo ("<tr><th>avg(zarobki)</th><th>nazwa_dzial</th></tr>"); 
