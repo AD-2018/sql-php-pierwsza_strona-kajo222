@@ -3,8 +3,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <button onclick="window.location.href='https://github.com/AD-2018/sql-php-pierwsza_strona-kajo222'">Github</button>
-        <h1>Kacper Korczak</h1>
+        <h1><button onclick="window.location.href='https://github.com/AD-2018/sql-php-pierwsza_strona-kajo222'">Github</button>Kacper Korczak</h1>
 
             <?php
             require_once("connect.php");
