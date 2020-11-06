@@ -19,7 +19,7 @@
                 
 
         
-            $sql ="select imie,zarobki from pracownicy where imie not like '%a' having zarobki<40";
+            $sql ="SELECT  * FROM pracownicy WHERE dzial=2";
             echo("<h3>Zadanie 1</h3>");
             $wynik = mysqli_query($conn, $sql);
 
@@ -34,7 +34,7 @@
         
         
         
-            $sql ="select nazwa_dzial from pracownicy,organizacja where id_org=dzial and (dzial=2 or dzial=3) group by dzial";
+            $sql ="SELECT  * FROM pracownicy WHERE dzial=2 and dzial=3";
             echo("<h3>Zadanie 2</h3>");
             $wynik = mysqli_query($conn, $sql);  
                 echo('<table border="1" class="tabela"');
@@ -48,7 +48,7 @@
                      
         
         
-            $sql ="select avg(zarobki),nazwa_dzial from pracownicy,organizacja where id_org=dzial and imie not like '%a' group by dzial having avg(zarobki)<35"; 
+            $sql ="SELECT  * FROM pracownicy WHERE zarobki<30"; 
             echo("<h3>Zadanie 3</h3>");
             $wynik = mysqli_query($conn, $sql);
                 echo('<table border="1" class="tabela"'); 
@@ -59,21 +59,7 @@
                             echo("</tr>");
                         }
                 echo('</table>'); 
-        
-        
-        
-            $sql ="select avg(zarobki),nazwa_dzial from pracownicy,organizacja where id_org=dzial group by dzial having avg(zarobki)<40"; 
-            echo("<h3>Zadanie 4</h3>");
-            $wynik = mysqli_query($conn, $sql);  
-                echo('<table border="1" class="tabela"'); 
-                    echo ("<tr><th>avg(zarobki)</th><th>nazwa_dzial</th></tr>"); 
-                        while($wiersz=mysqli_fetch_assoc($wynik)){ 
-                            echo("<tr>");     
-                            echo("<td>".$wiersz['avg(zarobki)']."</td><td>".$wiersz['nazwa_dzial']."</td>");
-                            echo("</tr>");
-                        }
-                echo('</table>');
-        
+   
 
             ?>
     </body>
