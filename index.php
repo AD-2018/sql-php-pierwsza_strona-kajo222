@@ -34,19 +34,19 @@
                 echo('</table>');
         
         
-        
-            $sql ="SELECT  * FROM pracownicy WHERE dzial=2 and dzial=3";
-            echo("<h3>Zadanie 2</h3>");
-            $wynik = mysqli_query($conn, $sql);  
-                echo('<table border="1" class="tabela"');
+                     
+            $sql ="SELECT  * FROM pracownicy WHERE dzial=2 and dzial=3"; 
+            echo("<h3>Zadanie 3</h3>");
+            $wynik = mysqli_query($conn, $sql);
+                echo('<table border="1" class="tabela"'); 
                     echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>");
-                        while($wiersz=mysqli_fetch_assoc($wynik)){
-                            echo("<tr>");
+                        while($wiersz=mysqli_fetch_assoc($wynik)){  
+                            echo("<tr>");     
                             echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['data_urodzenia']."</td>");
                             echo("</tr>");
-                        } 
-                    echo('</table>'); 
-                     
+                        }
+                echo('</table>'); 
+        
         
         
             $sql ="SELECT  * FROM pracownicy WHERE zarobki<30"; 
