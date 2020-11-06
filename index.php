@@ -12,9 +12,9 @@
                     echo('<table border="1" class="tabela"');
                     echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>"); 
                         while($wiersz=mysqli_fetch_assoc($wynik)){ 
-                            echo("<tr>");
-                            echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['data_urodzenia']."</td>");     
-                            echo("</tr>");
+//                             echo("<tr>");
+//                             echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['data_urodzenia']."</td>");     
+//                             echo("</tr>");
                         } 
                     echo('</table>');
                 
@@ -41,8 +41,9 @@
                 echo('<table border="1" class="tabela"'); 
                     echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>");
                         while($wiersz=mysqli_fetch_assoc($wynik)){  
-                            echo("<tr>");     
-                            echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['data_urodzenia']."</td>");
+                            echo("<tr>"); 
+                            echo("<td>1</td>";
+                      //      echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['data_urodzenia']."</td>");
                             echo("</tr>");
                         }
                 echo('</table>'); 
