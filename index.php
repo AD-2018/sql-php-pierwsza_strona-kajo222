@@ -36,7 +36,7 @@
         
                      
             $sql ="SELECT  * FROM pracownicy WHERE dzial=2 and dzial=3"; 
-            echo("<h3>Zadanie 3</h3>");
+            echo("<h3>Zadanie 2</h3>");
             $wynik = mysqli_query($conn, $sql);
                 echo('<table border="1" class="tabela"'); 
                     echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>");
