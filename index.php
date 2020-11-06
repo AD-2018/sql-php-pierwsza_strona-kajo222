@@ -53,10 +53,10 @@
             echo("<h3>Zadanie 3</h3>");
             $wynik = mysqli_query($conn, $sql);
                 echo('<table border="1" class="tabela"'); 
-                    echo ("<tr><th>avg(zarobki)</th><th>nazwa_dzial</th></tr>"); 
+                    echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>");
                         while($wiersz=mysqli_fetch_assoc($wynik)){  
                             echo("<tr>");     
-                            echo("<td>".$wiersz['avg(zarobki)']."</td><td>".$wiersz['nazwa_dzial']."</td>");     
+                            echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['data_urodzenia']."</td>");
                             echo("</tr>");
                         }
                 echo('</table>'); 
