@@ -11,7 +11,8 @@ h1 {
   margin-left: 20px;
 }
 table {
-  float: center;
+  margin-left: auto; 
+  margin-right: auto;
   border-collapse: collapse;
   width: 40%;
 }
