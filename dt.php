@@ -7,7 +7,7 @@
         <?php
             require_once("connect.php");
 
-                $sql = "SELECT sum(zarobki) as suma FROM pracownicy";
+                $sql = "select imie ,YEAR(CURDATE())-YEAR(data_urodzenia) as wiek, nazwa_dzial from pracownicy, organizacja where id_org=dzial";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 1 - ".$sql);
                     echo('<table border="1">');
@@ -21,7 +21,7 @@
 
 
 
-                $sql = "SELECT sum(zarobki) as suma FROM pracownicy where imie like '%a'";
+                $sql = "select imie ,YEAR(CURDATE())-YEAR(data_urodzenia) as wiek, nazwa_dzial from pracownicy, organizacja where id_org=dzial and nazwa_dzial='serwis'";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 2 - ".$sql);
                     echo('<table border="1">');
@@ -35,7 +35,7 @@
 
 
 
-                $sql = "SELECT sum(zarobki) as suma FROM pracownicy where imie not like '%a' and (dzial=2 or dzial=3)";   
+                $sql = "select sum(YEAR(CURDATE())-YEAR(data_urodzenia)) as wiek from pracownicy, organizacja where id_org=dzial";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 3 - ".$sql);
                     echo('<table border="1">');
@@ -49,7 +49,7 @@
 
 
 
-                $sql = "SELECT avg(zarobki) as srednia FROM pracownicy where dzial=4";   
+                $sql = "select sum(YEAR(CURDATE())-YEAR(data_urodzenia)) as wiek from pracownicy, organizacja where id_org=dzial and nazwa_dzial='handel'";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 4 - ".$sql);
                     echo('<table border="1">');
@@ -63,7 +63,7 @@
                     
                     
                     
-                $sql = "SELECT avg(zarobki) as srednia FROM pracownicy where imie not like '%a' and (dzial=1 or dzial=2)";   
+                $sql = "select sum(YEAR(CURDATE())-YEAR(data_urodzenia)) as wiek from pracownicy, organizacja where id_org=dzial and imie like '%a'";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 5 - ".$sql);
                     echo('<table border="1">');
@@ -77,7 +77,7 @@
                     
                     
                     
-                $sql = "SELECT count(imie) as ilu FROM pracownicy";   
+                $sql = "select sum(YEAR(CURDATE())-YEAR(data_urodzenia)) as wiek from pracownicy, organizacja where id_org=dzial and imie not like '%a'";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 6 - ".$sql);
                     echo('<table border="1">');
@@ -91,7 +91,7 @@
                     
                     
                     
-                $sql = "SELECT count(imie) as ilu FROM pracownicy where imie like '%a' and (dzial=1 or dzial=3)";   
+                $sql = "select avg(YEAR(CURDATE())-YEAR(data_urodzenia)) as wiek, nazwa_dzial from pracownicy, organizacja where id_org=dzial group by dzial";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 7 - ".$sql);
                     echo('<table border="1">');
@@ -106,7 +106,7 @@
                     
                     
                     
-                $sql = "SELECT sum(zarobki) as suma FROM pracownicy where imie not like '%a'";   
+                $sql = "select sum(YEAR(CURDATE())-YEAR(data_urodzenia)) as wiek, nazwa_dzial from pracownicy, organizacja where id_org=dzial group by dzial";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 8 - ".$sql);
                     echo('<table border="1">');
@@ -120,9 +120,9 @@
                     
                     
                     
-                $sql = "SELECT dzial, sum(zarobki) as suma FROM pracownicy group by dzial";   
+                $sql = "select max(YEAR(CURDATE())-YEAR(data_urodzenia)) as wiek, nazwa_dzial, imie from pracownicy, organizacja where id_org=dzial group by dzial";   
                 $result = mysqli_query($conn, $sql);
-                echo("Zad 1 - ".$sql);
+                echo("Zad 9 - ".$sql);
                     echo('<table border="1">');
                         echo('<th>Dzial</th><th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
@@ -134,9 +134,10 @@
                     
                     
                     
-                $sql = "SELECT dzial, count(imie) as suma FROM pracownicy group by dzial";   
+                $sql = "select min(YEAR(CURDATE())-YEAR(data_urodzenia)) as wiek, nazwa_dzial, imie from pracownicy, organizacja where (id_org=dzial) and (nazwa_dzial='handel' or 
+nazwa_dzial='serwis') group by dzial";   
                 $result = mysqli_query($conn, $sql);
-                echo("Zad 2 - ".$sql);
+                echo("Zad 10 - ".$sql);
                     echo('<table border="1">');
                         echo('<th>Dzial</th><th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
@@ -148,9 +149,9 @@
                     
                     
                     
-                $sql = "SELECT dzial, avg(zarobki) as suma FROM pracownicy group by dzial";   
+                $sql = "select imie,DATEDIFF(CURDATE(),data_urodzenia) AS dni, nazwa_dzial, imie from pracownicy, organizacja where id_org=dzial";   
                 $result = mysqli_query($conn, $sql);
-                echo("Zad 3 - ".$sql);
+                echo("Zad 11 - ".$sql);
                     echo('<table border="1">');
                         echo('<th>Dzial</th><th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
@@ -162,9 +163,10 @@
                     
                     
                     
-                $sql = "SELECT sum(zarobki) as suma, if ((imie like '%a'), 'Kobiety', 'Mezczyzni') as 'grupa' FROM pracownicy group by grupa";   
+                $sql = "SELECT imie ,YEAR(CURDATE())-YEAR(data_urodzenia) as wiek, nazwa_dzial FROM pracownicy, organizacja where id_org=dzial and (imie not like '%a') order by 
+data_urodzenia asc limit 1";   
                 $result = mysqli_query($conn, $sql);
-                echo("Zad 4 - ".$sql);
+                echo("Zad 12 - ".$sql);
                     echo('<table border="1">');
                          echo('<th>Grupa</th><th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
@@ -176,41 +178,45 @@
         
         
         
-                $sql = "SELECT avg(zarobki) as suma, if ((imie like '%a'), 'Kobiety', 'Mezczyzni') as 'grupa' FROM pracownicy group by grupa";   
-                $result = mysqli_query($conn, $sql);
-                echo("Zad 5 - ".$sql);
-                    echo('<table border="1">');
-                        echo('<th>Grupa</th><th>Srednia</th>');
-                            while($row=mysqli_fetch_assoc($result)){
-                                echo('<tr>');
-                                echo('<td>'.$row['grupa'].'</td><td>'.$row['suma'].'</td>');
-                                echo('</tr>');
-                            }
-                    echo('</table>');
-        
-        
-                $sql = "SELECT nazwa_dzial, avg(zarobki) as suma FROM pracownicy, organizacja where id_org=dzial group by dzial having avg(zarobki)<28";   
-                $result = mysqli_query($conn, $sql);
-                echo("Zad 1 - ".$sql);
-                    echo('<table border="1">');
-                        echo('<th>Dzial</th><th>Srednia</th>');
-                            while($row=mysqli_fetch_assoc($result)){
-                                echo('<tr>');
-                                echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['suma'].'</td>');
-                                echo('</tr>');
-                            }
-                    echo('</table>');
-        
-        
-        
-                $sql = "SELECT nazwa_dzial, avg(zarobki) as suma FROM pracownicy, organizacja where id_org=dzial and imie not like '%a' group by dzial having avg(zarobki)>30";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 2 - ".$sql);
+                    $sql1 = "SET lc_time_names = 'pl_PL'";
+                    $sql2 ="SELECT DATE_FORMAT(CURDATE(), '%W')as data";
+                    echo ("<li>".$sql."</li><br><br>");
+                    $result = mysqli_query($conn, $sql1);
+                    $result = mysqli_query($conn, $sql2);
+                    echo ('<table border = "1" class = "moja_tabelka">');
+                        echo ("<tr><th>data</th></tr>");
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo ('<tr>');
+                                echo ('<td>'.$row["data"].'</td>');
+                                echo ('</tr>');
+                            }
+                    echo ('</table>');
+        
+        
+                $sql = "select imie, date_format(data_urodzenia, '%W-%M-%Y') as data,  nazwa_dzial from pracownicy, organizacja where id_org=dzial";   
+                $result = mysqli_query($conn, $sql);
+                echo("Zad 3 - ".$sql);
                     echo('<table border="1">');
                         echo('<th>Dzial</th><th>Srednia</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['suma'].'</td>');
+                                echo('<td>'.$row['imie'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['data'].'</td>');
+                                echo('</tr>');
+                            }
+                    echo('</table>');
+        
+        
+        
+                $sql = "SELECT curtime(4) as data";   
+                $result = mysqli_query($conn, $sql);
+                echo("Zad 4 - ".$sql);
+                    echo('<table border="1">');
+                        echo('<th>Dzial</th><th>Srednia</th>');
+                            while($row=mysqli_fetch_assoc($result)){
+                                echo('<tr>');
+                                echo('<td>'.$row['data'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -218,18 +224,105 @@
                     
         
         
-                $sql = "SELECT nazwa_dzial, count(imie) as suma FROM pracownicy, organizacja where id_org=dzial group by dzial having count(imie)>3";   
+                $sql = "select imie, date_format(data_urodzenia, '%Y-%M-%W') as data,  nazwa_dzial from pracownicy, organizacja where id_org=dzial";   
                 $result = mysqli_query($conn, $sql);
-                echo("Zad 3 - ".$sql);
+                echo("Zad 5 - ".$sql);
                     echo('<table border="1">');
                         echo('<th>Dzial</th><th>Ilosc</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['suma'].'</td>');
+                                echo('<td>'.$row['imie'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['data'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
         
+        
+        
+                $sql = "SELECT imie, DATEDIFF(CURDATE(),data_urodzenia)*24 as godziny, DATEDIFF(CURDATE(),data_urodzenia)*24*60 as minuty, nazwa_dzial FROM pracownicy, organizacja where
+id_org=dzial";   
+                $result = mysqli_query($conn, $sql);
+                echo("Zad 6 - ".$sql);
+                    echo('<table border="1">');
+                        echo('<th>Dzial</th><th>Ilosc</th>');
+                            while($row=mysqli_fetch_assoc($result)){
+                                echo('<tr>');
+                               echo('<td>'.$row['imie'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['godziny'].'</td><td>'.$row['minuty'].'</td>');
+                                echo('</tr>');
+                            }
+                    echo('</table>');
+        
+        
+        
+        
+                $sql = 'SELECT DATE_FORMAT("2002-05-16", "%j") as urodz';   
+                $result = mysqli_query($conn, $sql);
+                echo("Zad 7 - ".$sql);
+                    echo('<table border="1">');
+                        echo('<th>Dzial</th><th>Ilosc</th>');
+                            while($row=mysqli_fetch_assoc($result)){
+                                echo('<tr>');
+                                echo('<td>'.$row['urodz'].'</td>');
+                                echo('</tr>');
+                            }
+                    echo('</table>');
+        
+        
+                $sql = "select imie, DATE_FORMAT(data_urodzenia,'%W') as dzien,  nazwa_dzial from pracownicy, organizacja where id_org=dzial ORDER BY 
+                     CASE
+                          WHEN dzien = 'Poniedziałek' THEN 1
+                          WHEN dzien = 'Wtorek' THEN 2
+                          WHEN dzien = 'Środa' THEN 3
+                          WHEN dzien= 'Czwartek' THEN 4
+                          WHEN dzien = 'Piątek' THEN 5
+                          WHEN dzien = 'Sobota' THEN 6
+                          WHEN dzien = 'Niedziela' THEN 7
+                     END ASC";
+                $result = mysqli_query($conn, $sql);
+                echo("Zad 8 - ".$sql);
+
+                echo('<table border="1">');
+                    echo('<th>Imie</th><th>Dzial</th><th>Data urodzenia</th>');
+                        while($row=mysqli_fetch_assoc($result)){
+                            echo('<tr>');
+                            echo('<td>'.$row['imie'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['dzien'].'</td>');
+                            echo('</tr>');
+                        }
+                echo('</table>');
+        
+        
+                $sql = "select Count(DATE_FORMAT(data_urodzenia, '%W')) as data from pracownicy, organizacja where id_org=dzial and (DATE_FORMAT(data_urodzenia, '%W')='Poniedziałek')";   
+                $result = mysqli_query($conn, $sql);
+                echo("Zad 9 - ".$sql);
+                    echo('<table border="1">');
+                        echo('<th>Dzial</th><th>Ilosc</th>');
+                            while($row=mysqli_fetch_assoc($result)){
+                                echo('<tr>');
+                                echo('<td>'.$row['data'].'</td>');
+                                echo('</tr>');
+                            }
+                    echo('</table>');
+        
+        
+        
+                $sql = "SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, count(date_format(data_urodzenia, '%W')) as Liczba FROM pracownicy GROUP BY dzien ORDER BY CASE
+                          WHEN dzien = 'Poniedziałek' THEN 1
+                          WHEN dzien = 'Wtorek' THEN 2
+                          WHEN dzien = 'Środa' THEN 3
+                          WHEN dzien = 'Czwartek' THEN 4
+                          WHEN dzien = 'Piątek' THEN 5
+                          WHEN dzien = 'Sobota' THEN 6
+                          WHEN dzien = 'Niedziela' THEN 7
+                          END ASC";
+                $result = mysqli_query($conn, $sql);
+                echo("Zad 9 - ".$sql);
+                echo('<table border="1">');
+                    echo('<th>Dzień</th><th>Liczba</th>');
+                        while($row=mysqli_fetch_assoc($result)){
+                            echo('<tr>');
+                            echo('<td>'.$row['dzien'].'</td><td>'.$row['Liczba'].'</td>');
+                            echo('</tr>');
+                        }
+                echo('</table>');
         
 
 
