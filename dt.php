@@ -11,10 +11,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 1 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Suma</th>');
+                        echo('<th>Imie</th><th>Wiek</th><th>Dzial</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['suma'].'</td>');
+                                echo('<td>'.$row['imie'].'</td><td>'.$row['wiek'].'</td><td>'.$row['nazwa_dzial'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -25,10 +25,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 2 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Suma</th>');
+                        echo('<th>Imie</th><th>Wiek</th><th>Dzial</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['suma'].'</td>');
+                                echo('<td>'.$row['imie'].'</td><td>'.$row['wiek'].'</td><td>'.$row['nazwa_dzial'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -42,7 +42,7 @@
                         echo('<th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['suma'].'</td>');
+                                echo('<td>'.$row['wiek'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -53,10 +53,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 4 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Średnia</th>');
+                        echo('<th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['srednia'].'</td>');
+                                echo('<td>'.$row['wiek'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -67,10 +67,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 5 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Średnia</th>');
+                        echo('<th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['srednia'].'</td>');
+                                echo('<td>'.$row['wiek'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -81,10 +81,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 6 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Ilu</th>');
+                        echo('<th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['ilu'].'</td>');
+                                echo('<td>'.$row['wiek'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -95,10 +95,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 7 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Ilu</th>');
+                        echo('<th>Wiek</th><th>Dzial</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['ilu'].'</td>');
+                                echo('<td>'.$row['wiek'].'</td><td>'.$row['nazwa_dzial'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -110,10 +110,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 8 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Suma</th>');
+                        echo('<th>Wiek</th><th>Dzial</th>')
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['suma'].'</td>');
+                                echo('<td>'.$row['wiek'].'</td><td>'.$row['nazwa_dzial'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -124,10 +124,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 9 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Dzial</th><th>Suma</th>');
+                        echo('<th>Imie</th><th>Wiek</th><th>Dzial</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['dzial'].'</td><td>'.$row['suma'].'</td>');
+                                echo('<td>'.$row['imie'].'</td><td>'.$row['wiek'].'</td><td>'.$row['nazwa_dzial'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -139,10 +139,10 @@ nazwa_dzial='serwis') group by dzial";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 10 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Dzial</th><th>Suma</th>');
+                        echo('<th>Imie</th><th>Wiek</th><th>Dzial</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['dzial'].'</td><td>'.$row['suma'].'</td>');
+                                echo('<td>'.$row['imie'].'</td><td>'.$row['wiek'].'</td><td>'.$row['nazwa_dzial'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -153,10 +153,10 @@ nazwa_dzial='serwis') group by dzial";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 11 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Dzial</th><th>Suma</th>');
+                        echo('<th>Imie</th><th>Wiek w dniach</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['dzial'].'</td><td>'.$row['suma'].'</td>');
+                                echo('<td>'.$row['imie'].'</td><td>'.$row['dni'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -168,10 +168,24 @@ data_urodzenia asc limit 1";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 12 - ".$sql);
                     echo('<table border="1">');
-                         echo('<th>Grupa</th><th>Suma</th>');
+                         echo('<th>Imie</th><th>Wiek</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['grupa'].'</td><td>'.$row['suma'].'</td>');
+                                echo('<td>'.$row['imie'].'</td><td>'.$row['wiek'].'</td>');
+                                echo('</tr>');
+                            }
+                    echo('</table>');
+        
+        
+                $sql = "SELECT imie ,YEAR(CURDATE())-YEAR(data_urodzenia) as wiek, nazwa_dzial FROM pracownicy, organizacja where id_org=dzial and (imie not like '%a') order by 
+data_urodzenia asc limit 1";   
+                $result = mysqli_query($conn, $sql);
+                echo("Zad 1 - ".$sql);
+                    echo('<table border="1">');
+                         echo('<th>Imie</th><th>Dzial</th><th>Data urodzenia</th>');
+                            while($row=mysqli_fetch_assoc($result)){
+                                echo('<tr>');
+                                echo('<td>'.$row['imie'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['data_urodzenia'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -199,7 +213,7 @@ data_urodzenia asc limit 1";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 3 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Dzial</th><th>Srednia</th>');
+                        echo('<th>Imie</th><th>Dzial</th><th>Data urodzenia</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
                                 echo('<td>'.$row['imie'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['data'].'</td>');
@@ -213,7 +227,7 @@ data_urodzenia asc limit 1";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 4 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Dzial</th><th>Srednia</th>');
+                        echo('<th>Data</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
                                 echo('<td>'.$row['data'].'</td>');
@@ -228,7 +242,7 @@ data_urodzenia asc limit 1";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 5 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Dzial</th><th>Ilosc</th>');
+                        echo('<th>Imie</th><th>Dzial</th><th>Data urodzenia</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
                                 echo('<td>'.$row['imie'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['data'].'</td>');
@@ -243,10 +257,10 @@ id_org=dzial";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 6 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Dzial</th><th>Ilosc</th>');
+                        echo('<th>Imie</th><th>Dzial</th><th>Godziny</th><th>Minuty</th><th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                               echo('<td>'.$row['imie'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['godziny'].'</td><td>'.$row['minuty'].'</td>');
+                                echo('<td>'.$row['imie'].'</td><td>'.$row['nazwa_dzial'].'</td><td>'.$row['godziny'].'</td><td>'.$row['minuty'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -258,7 +272,7 @@ id_org=dzial";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 7 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Dzial</th><th>Ilosc</th>');
+                        echo('<th>Data</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
                                 echo('<td>'.$row['urodz'].'</td>');
@@ -294,7 +308,7 @@ id_org=dzial";
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 9 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Dzial</th><th>Ilosc</th>');
+                        echo('<th>Ilosc</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
                                 echo('<td>'.$row['data'].'</td>');
@@ -314,7 +328,7 @@ id_org=dzial";
                           WHEN dzien = 'Niedziela' THEN 7
                           END ASC";
                 $result = mysqli_query($conn, $sql);
-                echo("Zad 9 - ".$sql);
+                echo("Zad 10 - ".$sql);
                 echo('<table border="1">');
                     echo('<th>Dzień</th><th>Liczba</th>');
                         while($row=mysqli_fetch_assoc($result)){
