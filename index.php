@@ -7,7 +7,8 @@
         <?php
             require_once("connect.php");
 
-                $sql = "SELECT * FROM pracownicy where dzial=2";    
+                $sql = "SELECT * FROM pracownicy where dzial=2";
+                $result = mysqli_query($conn, $sql);
                 echo("Zad 1 - ".$sql);
                     echo('<table border="1">');
                         echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
@@ -20,7 +21,8 @@
 
 
 
-                $sql = "SELECT * FROM pracownicy where (dzial=2) or (dzial=3)";    
+                $sql = "SELECT * FROM pracownicy where (dzial=2) or (dzial=3)";
+                $result = mysqli_query($conn, $sql);
                 echo("Zad 2 - ".$sql);
                     echo('<table border="1">');
                         echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
@@ -46,7 +48,8 @@
 
 
 
-                $sql = "SELECT * FROM pracownicy where dzial=2";    
+                $sql = "SELECT * FROM pracownicy where dzial=2";
+                $result = mysqli_query($conn, $sql);
                 echo("Zad 1 - ".$sql);
                     echo('<table border="1">');
                         echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
