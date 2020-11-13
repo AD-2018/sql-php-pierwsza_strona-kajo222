@@ -134,8 +134,7 @@
                     
                     
                     
-                $sql = "select min(YEAR(CURDATE())-YEAR(data_urodzenia)) as wiek, nazwa_dzial, imie from pracownicy, organizacja where (id_org=dzial) and (nazwa_dzial='handel' or 
-nazwa_dzial='serwis') group by dzial";   
+                $sql = "select min(YEAR(CURDATE())-YEAR(data_urodzenia)) as wiek, nazwa_dzial, imie from pracownicy, organizacja where (id_org=dzial) and (nazwa_dzial='handel' or nazwa_dzial='serwis') group by dzial";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 10 - ".$sql);
                     echo('<table border="1">');
@@ -163,8 +162,7 @@ nazwa_dzial='serwis') group by dzial";
                     
                     
                     
-                $sql = "SELECT imie ,YEAR(CURDATE())-YEAR(data_urodzenia) as wiek, nazwa_dzial FROM pracownicy, organizacja where id_org=dzial and (imie not like '%a') order by 
-data_urodzenia asc limit 1";   
+                $sql = "SELECT imie ,YEAR(CURDATE())-YEAR(data_urodzenia) as wiek, nazwa_dzial FROM pracownicy, organizacja where id_org=dzial and (imie not like '%a') order by data_urodzenia asc limit 1";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 12 - ".$sql);
                     echo('<table border="1">');
@@ -177,8 +175,7 @@ data_urodzenia asc limit 1";
                     echo('</table>');
         
         
-                $sql = "SELECT imie ,YEAR(CURDATE())-YEAR(data_urodzenia) as wiek, nazwa_dzial FROM pracownicy, organizacja where id_org=dzial and (imie not like '%a') order by 
-data_urodzenia asc limit 1";   
+                $sql = "SELECT imie ,YEAR(CURDATE())-YEAR(data_urodzenia) as wiek, nazwa_dzial FROM pracownicy, organizacja where id_org=dzial and (imie not like '%a') order by data_urodzenia asc limit 1";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 1 - ".$sql);
                     echo('<table border="1">');
@@ -252,8 +249,7 @@ data_urodzenia asc limit 1";
         
         
         
-                $sql = "SELECT imie, DATEDIFF(CURDATE(),data_urodzenia)*24 as godziny, DATEDIFF(CURDATE(),data_urodzenia)*24*60 as minuty, nazwa_dzial FROM pracownicy, organizacja where
-id_org=dzial";   
+                $sql = "SELECT imie, DATEDIFF(CURDATE(),data_urodzenia)*24 as godziny, DATEDIFF(CURDATE(),data_urodzenia)*24*60 as minuty, nazwa_dzial FROM pracownicy, organizacja where id_org=dzial";   
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 6 - ".$sql);
                     echo('<table border="1">');
