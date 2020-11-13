@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-       <h1><button class="button" onclick="window.location.href='https://github.com/AD-2018/sql-php-pierwsza_strona-kajo222'">Github - Kacper Korczak</button><table><tr><td><a href="oip.php">Pracownicy i Organizacja </a></td><td><a href="fa.php">Funkcje agregujące </a></td><td><a href="dt.php">Data i Czas </a></td></tr></h1>
+       <h1><button class="button" onclick="window.location.href='https://github.com/AD-2018/sql-php-pierwsza_strona-kajo222'">Github - Kacper Korczak</button><table><tr><td><a href="oip.php">Pracownicy i Organizacja </a></td><td><a href="fa.php">Funkcje agregujące </a></td><td><a href="dt.php">Data i Czas </a></td></tr></table></h1>
         <?php
             require_once("connect.php");
 
