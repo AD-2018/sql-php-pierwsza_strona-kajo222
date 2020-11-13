@@ -110,7 +110,7 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 8 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Wiek</th><th>Dzial</th>')
+                        echo('<th>Wiek</th><th>Dzial</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
                                 echo('<td>'.$row['wiek'].'</td><td>'.$row['nazwa_dzial'].'</td>');
