@@ -11,10 +11,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 1 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -25,10 +25,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 2 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -39,10 +39,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 3 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -53,10 +53,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 4 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Średnia</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['srednia'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -67,10 +67,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 5 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Średnia</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['srednia'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -81,10 +81,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 6 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Ilu</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['ilu'].'</td>')
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -95,10 +95,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 7 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Ilu</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['ilu'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -110,10 +110,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 8 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -124,10 +124,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 1 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Dzial</th><th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['dzial'].'</td><td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -138,10 +138,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 2 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Dzial</th><th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['dzial'].'</td><td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -152,10 +152,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 3 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Dzial</th><th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['dzial'].'</td><td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -166,10 +166,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 4 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                         echo('<th>Grupa</th><th>Suma</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['grupa'].'</td><td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -180,10 +180,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 5 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Grupa</th><th>Srednia</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['grupa'].'</td><td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -193,10 +193,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 1 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Dzial</th><th>Srednia</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -207,10 +207,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 2 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Dzial</th><th>Srednia</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
@@ -222,10 +222,10 @@
                 $result = mysqli_query($conn, $sql);
                 echo("Zad 3 - ".$sql);
                     echo('<table border="1">');
-                        echo('<th>Imie</th><th>zarobki</th><th>Dzial</th>');
+                        echo('<th>Dzial</th><th>Ilosc</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['dzial'].'</td>');
+                                echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['suma'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
