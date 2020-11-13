@@ -84,7 +84,7 @@
                         echo('<th>Ilu</th>');
                             while($row=mysqli_fetch_assoc($result)){
                                 echo('<tr>');
-                                echo('<td>'.$row['ilu'].'</td>')
+                                echo('<td>'.$row['ilu'].'</td>');
                                 echo('</tr>');
                             }
                     echo('</table>');
