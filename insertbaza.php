@@ -6,7 +6,7 @@
   <title>Dane do Bazy</title>
 </head>
 <body>
-	<form action="insert.php" method="POST">
+	<form action="insertbaza.php" method="POST">
 	    <input type="text" name="imie">
 	    <input type="submit">
 	</form>
