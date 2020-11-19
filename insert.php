@@ -5,9 +5,13 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
-       VALUES (null,'Ksawery', 3, 36,'1995-10-21')";
+       VALUES (null, $_POST['imie'], 1, 76,'1991-11-21')";
 
-$conn->query($sql);
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
 $conn->close();
 ?>
