@@ -3,9 +3,12 @@
 	<head>
 		  <meta charset="utf-8">
 		  <meta name="viewport" content="width=device-width">
+		  <link rel="stylesheet" href="style.css">
 		  <title>Insert</title>
 	</head>
 	<body>
+		<?php include("navbar.php"); ?>
+		
 		<h3>DODAJ PRACOWNIKA</h3>
 		<form action="insert.php" method="POST">
 			<input type="text" name="imie" placeholder="imie"><br />
@@ -20,6 +23,7 @@
 			<input type="number" name="id" placeholder="id"><br />
 			<input type="submit" value="Zapisz w zmiennej $_POST['id']">
 		</form>
+		<br /><br />
 		<?php
 require_once("connect.php");
 $sql = "SELECT * FROM pracownicy";
