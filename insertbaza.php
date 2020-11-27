@@ -32,7 +32,7 @@ echo($sql);
 $result = mysqli_query($conn, $sql);
 
 echo('<table border="1">');
-    echo('<th>Imie</th><th>zarobki</th><th>Dzial</th><th>ID</th>');
+    echo('<th>id</th><th>imie</th><th>zarobki</th><th>dzial</th><th>data urodzenia</th><th>usuwanie</th>');
 
  while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
