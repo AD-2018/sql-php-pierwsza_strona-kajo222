@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("mysql-kako2307.alwaysdata.net","kako2307_1","QWE!@#123","kako2307_1");
+$conn = new mysqli($_SERVER["servername"],$_SERVER["user"],$_SERVER["pass"],$_SERVER["dbname"]);
 $sql = "SELECT * FROM pracownicy";
 
 
