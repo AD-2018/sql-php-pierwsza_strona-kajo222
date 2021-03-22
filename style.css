@@ -1,49 +1,73 @@
 body {
-  background-color: rgb(255, 241, 209);
+  background-color: #fff350;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imie {padding: 10px;}
+
+.item { margin: 10px;
+}
+
+.baner {
+  width: 100%;
+  background-color: #6bfff8;
   text-align: center;
 }
 
-.nav {
- width: 100%; 
-}
-
-h1 {
-  color: rgb(32, 0, 0);
-  margin-left: 20px;
-}
-table {
-  margin-left: auto; 
-  margin-right: auto;
-  border-collapse: collapse;
-  width: 50%;
-  margin-bottom: 50px;
+.github {
+  background-color: #9388f0;
+  padding: 1rem;
+  margin-left: 10px;
   margin-top: 10px;
-}
-th {
-  background-color: rgb(131, 122, 0);
-  color: white;
-  height: 50px;
-}
-td {
-  padding: 10px;
-}
-tr:nth-child(even) {
- background-color: rgb(255, 225, 159);
-}
-tr:nth-child(odd) {
- background-color: rgb(232, 221, 172);
-}
-
-
-button {
-  background-color: rgb(131, 122, 0);
-  color: white;
-  border: none;
-  padding: 15px 32px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 20%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 24px;
-  width: 100%;
-  border-radius: 12px;
+}
+
+.nav {
+  width: 10%;
+  background-color: #97fcff;
+}
+
+.link {
+  background-color: #777aff;
+  padding: 1rem;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 72%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+}
+.link:hover {
+  background-color: #0066CC;
+}
+
+.github:hover {
+  background-color: #0066CC;
+}
+
+table, td {
+  border-collapse: collapse;
+  background-color: #FFF9F9;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #66B2FF;
+  text-align: center;
+  padding: 8px;
+}
+
+.tabelki
+{width: 86%;
+background-color: #b5ffff;
 }
