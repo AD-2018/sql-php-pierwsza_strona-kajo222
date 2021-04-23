@@ -71,7 +71,7 @@
         <div class="str7C">
         <?php
                         require_once("../connect.php");
-                        $sql = "select sprawa, `Imie-Nazwisko`, (`WDW`.ID) as ID_TAB from `a`.WDW, `a`.Sprawa, `a`.Osoby where Osoby.ID=osoby_id and Sprawa.id=klasa_id order by ID_TAB asc";
+                        $sql = "select sprawa, `Imie-Nazwisko`, (`WDW`.ID) as ID_TAB from `kako2307_1`.WDW, `kako2307_1`.Sprawa, `kako2307_1`.Osoby where Osoby.ID=osoby_id and Sprawa.id=klasa_id order by ID_TAB asc";
                             if ($conn->connect_error) {
                                     die("Connection failed: " . $conn->connect_error);
                              }

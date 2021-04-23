@@ -70,7 +70,7 @@
         <div class="str4C">
         <?php
                         require_once("../connect.php");
-                        $sql = "select auto, `Imie-Nazwisko`, (`WDW`.ID) as ID_TAB from `a`.WDW, `a`.auta, `a`.Osoby where Osoby.ID=osoby_id and auta.id=klasa_id order by ID_TAB asc";
+                        $sql = "select auto, `Imie-Nazwisko`, (`WDW`.ID) as ID_TAB from `kako2307_1`.WDW, `kako2307_1`.auta, `kako2307_1`.Osoby where Osoby.ID=osoby_id and auta.id=klasa_id order by ID_TAB asc";
                             if ($conn->connect_error) {
                                     die("Connection failed: " . $conn->connect_error);
                              }

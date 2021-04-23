@@ -42,7 +42,7 @@
         <div class="str8B">
         <?php
                         require_once("../connect.php");
-                        $sql = "select rola, `Imie-Nazwisko`, (`WDW`.ID) as ID_TAB from `a`.WDW, `a`.rola, `a`.Osoby where Osoby.ID=osoby_id and rola.id=klasa_id order by ID_TAB asc";
+                        $sql = "select rola, `Imie-Nazwisko`, (`WDW`.ID) as ID_TAB from `kako2307_1`.WDW, `kako2307_1`.rola, `kako2307_1`.Osoby where Osoby.ID=osoby_id and rola.id=klasa_id order by ID_TAB asc";
                             if ($conn->connect_error) {
                                     die("Connection failed: " . $conn->connect_error);
                              }
