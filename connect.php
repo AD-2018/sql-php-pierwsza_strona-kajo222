@@ -6,10 +6,10 @@ if ($hostname=="localhost"){
   $password = '';
   $dbname = 'a'; 
 } else {
-$servername = $_SERVER['servername'];
-$username = $_SERVER['username'];
-$password = $_SERVER['password'];
-$dbname = $_SERVER['dbname']; 
+$servername = "mysql-kako2307.alwaysdata.net";
+$username = "kako2307_1";
+$password = "QWE!@#123";
+$dbname = "kako2307_1"; 
 }
 $conn = new mysqli($servername, $username, $password, $dbname);
 
