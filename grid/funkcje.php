@@ -24,7 +24,7 @@ function tab_del_male($tab_name, $tab_opcja, $tab_kolumna1, $tab_kolumna2){
 
 function niefajne($name1, $name2, $name3, $kolumna1, $kolumna2, $kolumna3, $kolumna4, $kolumna5){
     require("../connect.php");
-    $sql = "Select ".$name1.".".$kolumna1.", ".$kolumna4.", ".$kolumna5." from `jkako2307_1`.".$name1.", `jkako2307_1`.".$name2.", `kako2307_1`.".$name3." where ".$name2.".".$kolumna1."=".$kolumna2." and ".$name3.".".$kolumna1."=".$kolumna3." order by id asc";
+    $sql = "Select ".$name1.".".$kolumna1.", ".$kolumna4.", ".$kolumna5." from `kako2307_1`.".$name1.", `kako2307_1`.".$name2.", `kako2307_1`.".$name3." where ".$name2.".".$kolumna1."=".$kolumna2." and ".$name3.".".$kolumna1."=".$kolumna3." order by id asc";
     $result = mysqli_query($conn, $sql);
     echo("<h1>Wiele do Wielu</h1>");
     echo("<table border=1>");
