@@ -11,87 +11,26 @@
     <strong>
     <div class="str2">
         <div class="str2A">
-        <?php
-                        require_once("../connect.php");
-                        $sql = "select Klasa, `Imie-Nazwisko`, (`WDW`.ID) as ID_TAB from `kako2307_1`.WDW, `kako2307_1`.Klasa, `kako2307_1`.Osoby where Osoby.ID=osoby_id and Klasa.ID=klasa_id order by ID_TAB asc";
-                            if ($conn->connect_error) {
-                                    die("Connection failed: " . $conn->connect_error);
-                             }
-                                $result = mysqli_query($conn, $sql);
-                            if ( $result) {
-                            } else {
-                                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                            }
-                        
-                            echo("<h1>Wiele do Wielu</h1>");
-                        
-                            echo("<table border='1'>");
-                            echo("<th>ID</th><th>Nauczyciel</th><th>Klasa</th>");
-                                while($row = mysqli_fetch_assoc($result)) {
-                                    echo("<tr>");
-                                    echo("<td>".$row['ID_TAB']."</td><td>".$row['Imie-Nazwisko']."</td><td>".$row['Klasa']."</td>");
-                                    echo("</tr>");
-                                };
-                            echo("</table>");
-                            echo ("<br>");
-                ?>
+            <?php
+                require_once("funkcje.php");
+                niefajne("WDW", "Klasa", "Osoby", "id", "dane_1", "dane_2", "Imie_Nazwisko", "Klasa");
+                id_del_duze("WDW");
+            ?>
         </div>
         <div class="str2B">
-        <?php
-                require_once("../connect.php");
-                $sql = "SELECT * FROM Osoby";
-                
-                    if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                      }
-                
-                    $result = mysqli_query($conn, $sql);
-                    if ( $result) {
-                         echo "<br>";
-                     } else {
-                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                     }
-                
-                    echo("<h1>Nauczyciele</h1>");
-                
-                    echo("<table border='1'>");
-                    echo("<th>ID</th><th>Imię i Nazwisko</th>");
-                        while($row = mysqli_fetch_assoc($result)) {
-                            echo("<tr>");
-                            echo("<td>".$row['ID']."</td><td>".$row['Imie-Nazwisko']."</td>");
-                            echo("</tr>");
-                        };
-                    echo("</table>");
-                    echo ("<br>");
+            <h1>Nauczyciele</h1>
+            <?php
+            require_once("funkcje.php");
+            tab_del_male("Osoby", "1", "id", "Imie_Nazwisko");
+            id_del_male("Osoby", "1");
             ?>
         </div>
         <div class="str2C">
-        <?php
-                require_once("../connect.php");
-                $sql = "SELECT * FROM Klasa";
-                
-                    if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                      }
-                
-                    $result = mysqli_query($conn, $sql);
-                    if ( $result) {
-                         echo "<br>";
-                     } else {
-                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                     }
-                
-                    echo("<h1>Klasa</h1>");
-                
-                    echo("<table border='1'>");
-                    echo("<th>ID</th><th>Klasa</th>");
-                        while($row = mysqli_fetch_assoc($result)) {
-                            echo("<tr>");
-                            echo("<td>".$row['ID']."</td><td>".$row['Klasa']."</td>");
-                            echo("</tr>");
-                        };
-                    echo("</table>");
-                    echo ("<br>");
+            <h1>Klasa</h1>
+            <?php
+            require_once("funkcje.php");
+            tab_del_male("Klasa", "2", "id", "Klasa");
+            id_del_male("Klasa", "2");
             ?>
         </div>
         <div class="str2D">4</div>
